@@ -64,7 +64,7 @@ Cuerpo del Request (Ejemplo):
 }
 
 ***Prueba rapida desde powershell***
-Invoke-RestMethod -Uri "http://localhost:8081/api/facturas/recibir" -Method Post -ContentType "application/json" -Body '{"emiNit":"900123456","emiNombre":"Proveedor Tecnologico S.A.S","adqNit":"102030","facturaNumero":"FE-105","iteItems":[{"iteDescripcion":"Servicio Hosting Mensual","itePrecio":150000,"iteCantidad":1}]}'
+Invoke-RestMethod -Uri "http://localhost:8081/api/facturas/recibir" -Method Post -ContentType "application/json" -Body '{"emiNit":"900123456","emiNombre":"Proveedor Tecnologico S.A.S","adqNit":"102030","facturaNumero":"FE-110","iteItems":[{"iteDescripcion":"Servicio Hosting Mensual","itePrecio":150000,"iteCantidad":1}]}'
 
 **Monitoreo y Métricas en Tiempo Real (GET)**
 Permite observar la salud de la cola y el rendimiento de los workers en tiempo real.
