@@ -86,3 +86,19 @@ Para observar el comportamiento asíncrono y la resiliencia del sistema en tu m�
 -Abre el endpoint de métricas en tu navegador: http://localhost:8081/api/facturas/metricas.
 -Ejecuta el comando Invoke-RestMethod desde una terminal de PowerShell varias veces seguidas de forma rápida (presionando Flecha Arriba y Enter repetidamente).
 -Refresca el navegador constantemente. Observarás cómo las facturas se acumulan temporalmente en el campo facturasEnColaEnEsteMomento y disminuyen de uno en uno de forma progresiva cada 3 segundos, demostrando que el Worker procesa la carga de manera controlada sin bloquear el flujo principal de recepción.
+
+## Configuración del Entorno Local
+
+El proyecto está diseñado como una pasarela de facturación electrónica asíncrona mediante mensajería y persistencia NoSQL.
+
+### Requisitos Previos
+* **Java 17 / Maven**
+* **MongoDB** (Servidor corriendo localmente en el puerto `27017`)
+* **Apache ActiveMQ Artemis** (Integrado en memoria de forma embebida)
+
+### Configuración de la Base de Datos
+La aplicación se conecta automáticamente a la base de datos local denominada `pasarela_dian`. 
+
+Para inicializar el motor de la base de datos desde la consola de comandos de Windows:
+```bash 
+mongod
